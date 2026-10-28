@@ -1,0 +1,49 @@
+[project]
+name = "clearmark"
+version = "1.0.0"
+description = "Remove logos and watermarks from video, add your own branding, and make thumbnails, locally."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Vivek Ranjan" }]
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.8",
+    "numpy>=1.24",
+    "Pillow>=10.1",
+    "imageio-ffmpeg>=0.4.9",
+    "onnxruntime>=1.17",
+]
+keywords = ["video", "watermark", "logo-removal", "inpainting", "thumbnail", "ffmpeg", "opencv"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video",
+    "Environment :: X11 Applications",
+    "Environment :: Win32 (MS Windows)",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/TRAMOX/clearmark"
+Issues = "https://github.com/TRAMOX/clearmark/issues"
+Changelog = "https://github.com/TRAMOX/clearmark/blob/main/CHANGELOG.md"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.scripts]
+clearmark = "cli:main"
+
+[project.gui-scripts]
+clearmark-gui = "app:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["app", "cli"]
+packages = ["vwstudio"]

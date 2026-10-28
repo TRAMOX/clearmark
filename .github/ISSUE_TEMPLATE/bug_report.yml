@@ -1,0 +1,37 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Removal method
+      options:
+        - "Best: real background + AI fill"
+        - Fast fill
+        - Blur
+        - Not related to removal
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Windows 11, Python 3.12, ClearMark 1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message or console output
+      render: text
+  - type: textarea
+    id: media
+    attributes:
+      label: Sample frame or clip
+      description: A screenshot or short clip that shows the problem, if you can share one.

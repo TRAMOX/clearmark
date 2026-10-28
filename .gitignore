@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+env/
+
+# ClearMark runtime files
+models/
+settings.json
+settings.json.tmp
+*.part.*
+
+# Media (keep sample videos out of the repo)
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
